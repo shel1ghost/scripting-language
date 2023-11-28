@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS uses way</title>
+</head>
+<body>
+    <!--Inline js-->
+    <button onclick="alert('Hello js!')">Click Me!</button>
+    <button onclick="welcome()">Internal Click Me</button>
+    <button onclick="welcome_external()">External Click Me</button>
+    <!--Internal js-->
+    <script type="text/javascript">
+        function welcome(){
+            alert("Hello from internal js!");
+        }
+    </script>
+    <script src="test_script.js"></script>
+</body>
+</html>
