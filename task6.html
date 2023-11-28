@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change color</title>
+</head>
+<body>
+    <h1>Color Change</h1>
+    <div>
+        <label for="red">Red</label>
+        <input type="radio" onclick="change_color('red')" id="red" name="color">
+        <label for="pink">Pink</label>
+        <input type="radio" onclick="change_color('pink')" id="pink" name="color">
+        <label for="blue">Blue</label>
+        <input type="radio" onclick="change_color('blue')" id="blue" name="color">
+        <label for="green">Green</label>
+        <input type="radio" onclick="change_color('green')" id="green" name="color">
+    </div>
+    <script>
+        function change_color(color){
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
