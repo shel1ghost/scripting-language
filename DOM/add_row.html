@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Add Row</title>
+	</head>
+	<body>
+		<table border="2" id="main_table">
+			<thead>
+				<tr>
+					<th>S.No</th>
+					<th>Name</th>
+					<th>Phone</th>
+				</tr>
+			</thead>
+			<tbody id="table_body">
+				<tr>
+					<td>1</td>
+					<td>Babi Thakur</td>
+					<td>9808522120</td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<button onclick="addNewRow()">Add New Row</button>
+		<button onclick="removeRow()">Remove Row</button>
+		<script>
+			const addNewRow = () => {
+				let table_body = document.getElementById("table_body");
+				let tr = document.createElement("tr");
+				let td1 = document.createElement("td");
+				let td2 = document.createElement("td");
+				let td3 = document.createElement("td");
+				let s_no = document.createTextNode(prompt("Enter S.No: "));
+				let name = document.createTextNode(prompt("Enter name: "));
+				let phone = document.createTextNode(prompt("Enter phone: "));
+				td1.appendChild(s_no);
+				td2.appendChild(name);
+				td3.appendChild(phone);
+				tr.appendChild(td1);
+				tr.appendChild(td2);
+				tr.appendChild(td3);
+				table_body.appendChild(tr);
+			}
+			
+			const removeRow = () => {
+				let table = document.getElementById("main_table");
+				table.deleteRow(`${table.rows.length-1}`);
+			}
+		</script>
+	</body>
+</html>

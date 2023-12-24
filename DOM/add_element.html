@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Adding Elements</title>
+	</head>
+	<body>
+		<button onclick="addNewElement()">Add new element</button>
+		<div id="div1">
+			<p id="p1">Tu mera koi na ho ke vi kuch lage</p>
+			<p id="p2">Kiya re jo vi tune kaise kiya re</p>
+		</div>
+		<script>
+			function addNewElement(){
+				let text = prompt("Enter the text you want to add: ");
+				let new_element = document.createElement("p");
+				let text_node = document.createTextNode(text);
+				let div1 = document.getElementById("div1");
+				div1.appendChild(new_element);
+				new_element.id = "new_elm";
+				new_element.appendChild(text_node);
+			}
+		</script>
+	</body>
+</html>
+	
